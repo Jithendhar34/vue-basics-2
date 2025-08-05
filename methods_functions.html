@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+   <title>Vue Methods Simple Example</title>
+</head>
+<body>
+
+    <div id="app">
+        <p>{{ welcome() }}</p> <!-- Calling method directly in template -->
+    </div>
+
+</body>
+<script>
+    const { createApp } = Vue;
+
+    createApp({
+        methods: {
+            welcome() {
+                return 'Hello guys!';
+            }
+        }
+    }).mount('#app');
+</script>
+</html>
